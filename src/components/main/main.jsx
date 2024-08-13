@@ -6,7 +6,7 @@ import { category } from "../../constants";
 import { ApiService } from "../../service/api.service";
 
 const Main = () => {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("YouTube");
   const [videos, setVideos] = useState([]);
 
   const selectedCategoryHendler = (category) => setSelectedCategory(category);
@@ -22,12 +22,11 @@ const Main = () => {
     // };
     // getData();
     ApiService.fetching(`search?part=snippet&q=${selectedCategory}`).then((data) => setVideos(data.items));
-  }, []);
+  }, [selectedCategory]);
 
   return (
     <Stack
       pt={"90px"}
-      // pl={"300px"}
       sx={{
         pl:{xs:"10px",md:"300px"},
         background: colors.primary,

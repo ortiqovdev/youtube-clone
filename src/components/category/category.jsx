@@ -8,8 +8,8 @@ const Category = ({ selectedCategoryHendler, selectedCategory }) => {
     <Stack
       direction={"row"}
       sx={{
-        overflowY: "hidden",
         backgroundColor: `${colors.primary}`,
+        display: { xs: "none", md: "flex" },
         pb: 1,
       }}
     >
@@ -33,7 +33,7 @@ const Category = ({ selectedCategoryHendler, selectedCategory }) => {
         </button>
       ))}
     </Stack>
-  )
+  );
 };
 
 export default Category;

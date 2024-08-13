@@ -39,7 +39,7 @@ code {
 }
 .category-btn{
   text-transform: capitalize;
-  display: flex;
+  /* display: flex; */
   height: 30px;
   width: auto;
   align-items: center;
